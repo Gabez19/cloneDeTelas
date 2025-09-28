@@ -11,27 +11,18 @@ interface DemoNavBarProps {
 const DemoNavBar: React.FC<DemoNavBarProps> = ({ currentRouteName }) => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
-  // Encontra o índice da tela atual na ordem sequencial
   const currentIndex = SCREENS_ORDER.indexOf(currentRouteName);
-  
-  // Define o nome da próxima tela (se houver)
   const nextRouteName = SCREENS_ORDER[currentIndex + 1];
-  
-  // Define o nome da tela anterior (se houver)
   const previousRouteName = SCREENS_ORDER[currentIndex - 1];
 
-  // Função para navegar para a próxima tela
   const goToNext = () => {
     if (nextRouteName) {
-      // Usamos 'navigate' para ir para a próxima tela na ordem
       navigation.navigate(nextRouteName); 
     }
   };
 
-  // Função para navegar para a tela anterior
   const goToPrevious = () => {
     if (previousRouteName) {
-      // Usamos 'goBack' para simular o botão "Voltar" nativo
       navigation.goBack(); 
     }
   };
@@ -81,7 +72,6 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: '#eee',
     paddingHorizontal: 15,
-    // Garante que a barra fique em primeiro plano
     zIndex: 10, 
   },
   button: {

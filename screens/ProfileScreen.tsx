@@ -24,7 +24,6 @@ const menuItems: MenuItemProps[] = [
   { icon: 'people-outline', iconSet: 'Ionicons', text: 'Comunidade iFood', isNew: true },
 ];
 
-// --- Componente para cada Item de Menu (Reutilizável) ---
 const MenuItem: React.FC<MenuItemProps> = ({ icon, iconSet, text, isNew }) => {
     let IconComponent: any;
     switch (iconSet) {
@@ -106,7 +105,7 @@ const ProfileScreen: React.FC = () => {
 // --- Estilos ---
 const styles = StyleSheet.create({
   appContainer: { flex: 1, backgroundColor: '#fff', paddingTop: Platform.OS === 'android' ? 30 : 0 },
-  scrollContent: { paddingBottom: 20 }, // Espaçamento inferior para compensar a NavBar
+  scrollContent: { paddingBottom: 20 },
   header: { flexDirection: 'row', alignItems: 'center', padding: 20, paddingTop: 20, borderBottomWidth: 1, borderBottomColor: '#eee', marginBottom: 20 },
   profilePicPlaceholder: { width: 60, height: 60, borderRadius: 30, backgroundColor: '#F3C4C8', justifyContent: 'center', alignItems: 'center' },
   initials: { color: '#8B0000', fontSize: 20, fontWeight: 'bold' },
