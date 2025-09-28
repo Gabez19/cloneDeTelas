@@ -51,6 +51,3 @@ O Flexbox é o sistema de layout padrão do React Native, facilitando o alinhame
 **No projeto das telas clonadas:**
 - O `StyleSheet` foi usado para centralizar e reaproveitar estilos.
 - O Flexbox foi utilizado para alinhar menus, cards, ícones e botões, garantindo responsividade e organização visual.
-
-**Dica:**  
-Consulte a [documentação oficial do Flexbox no React Native](https://reactnative.dev/docs/flexbox) para mais exemplos e detalhes.
